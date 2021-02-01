@@ -1,0 +1,40 @@
+{
+    "overrides": [
+        {
+            "files":["*.ts", "*.tsx"],
+            "parserOptions": {
+                "project":["./tsconfig.json"]
+            }
+        }
+    ],
+	"parser": "@typescript-eslint/parser", 
+	"parserOptions": {
+		"project":["./tsconfig.json"]
+},
+	
+	"settings": {
+		"react": {
+			"version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+		}
+	},
+
+	"extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "airbnb-typescript"],
+
+	"rules": {
+		"quotes": ["error", "single"],
+		"semi": ["error", "never"],
+		"@typescript-eslint/semi": ["error", "never"],
+		"indent": ["error", 2],
+		"jsx-quotes": ["error", "prefer-single"],
+		"no-multi-spaces": ["error"],
+		"no-var-requires": "off",
+		"react/react-in-jsx-scope":"off",
+		"spaced-comment": "off",
+		"no-console": "warn",
+		"react/jsx-props-no-spreading":"off",
+		"@typescript-eslint/no-empty-interface": "warn",
+		"prefer-destructuring": ["error", { "object": true, "array": false }],
+		"@typescript-eslint/no-unused-vars": ["warn"],
+		"no-unused-vars": ["warn", { "argsIgnorePattern": "req|res|next|val|props" }]
+	}
+}
