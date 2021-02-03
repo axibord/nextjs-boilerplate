@@ -41,6 +41,7 @@ module.exports = {
     extend: {
       scale: ['active'],
       opacity: ['active'],
+      backgroundColor: ['active'],
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
